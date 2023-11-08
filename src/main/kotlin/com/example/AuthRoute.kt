@@ -101,24 +101,27 @@ fun Route.signIn(
     tokenConfig: TokenConfig
 ) {
     post("signIn") {
+        call.application.environment.log.info("sign in path call")
         val request = call.receiveOrNull<AuthRequest>() ?: kotlin.run {
             call.respond(HttpStatusCode.BadRequest)
             return@post
         }
         val user = withContext(Dispatchers.IO) { daoDafacde.userByUsername(request.username) }
+        call.application.environment.log.info("user error sign in:${user}")
         if (user == null) {
             call.respond(HttpStatusCode.Conflict, "Incorect username")
             return@post
         }
         val isValidPassword = hashingService.verify(
-            request.password,
+            request.password.toString(),
             SaltedHash(
                 user.password.toString(),
                 user.salt.toString()
             )
         )
+        call.application.environment.log.info("validate username and pass:${isValidPassword}")
         if (!isValidPassword) {
-            call.respond(HttpStatusCode.Conflict, "Incoreect username or password")
+            call.respond(HttpStatusCode.Conflict, "Incorrect username or password")
             return@post
         }
         val token = tokenService.generate(
