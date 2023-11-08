@@ -1,0 +1,1423 @@
+2023-11-03 08:37:57.770 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 08:37:58.456 [main] INFO  Application - Hello from module!
+2023-11-03 08:37:59.020 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 08:37:59.041 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 08:37:59.383 [main] INFO  Application - Application started in 1.676 seconds.
+2023-11-03 08:37:59.384 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-03 08:37:59.695 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 08:38:18.951 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-03 08:38:19.026 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 92ms
+2023-11-03 08:39:14.907 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 08:39:14.910 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 08:39:14.944 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 08:39:15.087 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/mvtaheri
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1.invokeSuspend(AuthRoute.kt:45)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-03 08:39:15.093 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/mvtaheri in 190ms
+2023-11-03 08:51:06.111 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-03 08:51:06.113 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-03 08:51:11.874 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 08:51:12.519 [main] INFO  Application - Hello from module!
+2023-11-03 08:51:12.966 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 08:51:12.983 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 08:51:13.234 [main] INFO  Application - Application started in 1.467 seconds.
+2023-11-03 08:51:13.235 [main] INFO  Application - Application started: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 08:51:13.429 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 08:51:26.393 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 08:51:26.442 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 08:51:26.480 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 08:51:26.497 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :null
+2023-11-03 08:51:26.505 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/mvtaheri
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1.invokeSuspend(AuthRoute.kt:46)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-03 08:51:26.535 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/mvtaheri in 165ms
+2023-11-03 08:53:05.089 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 08:53:05.092 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 08:53:08.972 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 08:53:09.646 [main] INFO  Application - Hello from module!
+2023-11-03 08:53:10.187 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 08:53:10.209 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 08:53:10.246 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-03 08:53:10.508 [main] INFO  Application - Application started in 1.613 seconds.
+2023-11-03 08:53:10.508 [main] INFO  Application - Application started: io.ktor.server.application.Application@3dfa819
+2023-11-03 08:53:10.717 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 08:54:54.808 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@3dfa819
+2023-11-03 08:54:54.815 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@3dfa819
+2023-11-03 12:32:12.164 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 12:32:13.304 [main] INFO  Application - Hello from module!
+2023-11-03 12:32:14.160 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 12:32:14.194 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 12:32:14.231 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=16)
+2023-11-03 12:32:14.538 [main] INFO  Application - Application started in 2.579 seconds.
+2023-11-03 12:32:14.539 [main] INFO  Application - Application started: io.ktor.server.application.Application@6b1dc20f
+2023-11-03 12:32:14.959 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 12:32:19.241 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-03 12:32:19.321 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 96ms
+2023-11-03 12:32:36.351 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 12:32:36.354 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 12:32:36.384 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 12:32:36.397 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :null
+2023-11-03 12:32:36.404 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/mvtaheri
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1.invokeSuspend(AuthRoute.kt:52)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-03 12:32:36.410 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/mvtaheri in 62ms
+2023-11-03 12:50:31.256 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@6b1dc20f
+2023-11-03 12:50:31.259 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@6b1dc20f
+2023-11-03 12:50:37.487 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 12:50:38.159 [main] INFO  Application - Hello from module!
+2023-11-03 12:50:38.683 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 12:50:38.701 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 12:50:38.715 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=17)
+2023-11-03 12:50:38.932 [main] INFO  Application - Application started in 1.604 seconds.
+2023-11-03 12:50:38.933 [main] INFO  Application - Application started: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 12:50:39.124 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 12:52:16.477 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 12:52:16.527 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 12:52:16.553 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 12:52:16.579 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :null
+2023-11-03 12:52:16.588 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/mvtaheri
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1.invokeSuspend(AuthRoute.kt:52)
+	at com.example.AuthRouteKt$getUsers$1.invoke(AuthRoute.kt)
+	at com.example.AuthRouteKt$getUsers$1.invoke(AuthRoute.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-03 12:52:16.616 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/mvtaheri in 159ms
+2023-11-03 13:10:14.186 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 13:10:14.187 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:mvtaheri
+2023-11-03 13:10:14.200 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 13:10:14.227 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad :null
+2023-11-03 13:10:14.228 [eventLoopGroupProxy-4-2] ERROR Application - Unhandled: GET - /getuser/mvtaheri
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1.invokeSuspend(AuthRoute.kt:52)
+	at com.example.AuthRouteKt$getUsers$1.invoke(AuthRoute.kt)
+	at com.example.AuthRouteKt$getUsers$1.invoke(AuthRoute.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-03 13:10:14.229 [eventLoopGroupProxy-4-2] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/mvtaheri in 43ms
+2023-11-03 13:20:38.304 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 13:20:38.305 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@4ce94d2f
+2023-11-03 13:20:44.403 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-03 13:20:45.034 [main] INFO  Application - Hello from module!
+2023-11-03 13:20:45.678 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-03 13:20:45.714 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-03 13:20:45.732 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=18)
+2023-11-03 13:20:46.031 [main] INFO  Application - Application started in 1.757 seconds.
+2023-11-03 13:20:46.032 [main] INFO  Application - Application started: io.ktor.server.application.Application@bc042d5
+2023-11-03 13:20:46.259 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-03 13:20:48.988 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 13:20:49.056 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 13:20:49.089 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 13:20:49.106 [eventLoopGroupProxy-4-1] INFO  Application - user run block:null
+2023-11-03 13:20:49.106 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :kotlin.Unit
+2023-11-03 13:20:49.135 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 177ms
+2023-11-03 13:20:58.552 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-03 13:20:58.553 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-03 13:20:58.567 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-03 13:20:58.582 [eventLoopGroupProxy-4-1] INFO  Application - user run block:null
+2023-11-03 13:20:58.582 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :kotlin.Unit
+2023-11-03 13:20:58.583 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 31ms
+2023-11-03 20:19:48.332 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@bc042d5
+2023-11-03 20:19:48.348 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@bc042d5
+2023-11-05 10:27:56.099 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 10:27:56.923 [main] INFO  Application - Hello from module!
+2023-11-05 10:27:57.495 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 10:27:57.514 [DefaultDispatcher-worker-2] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 10:27:57.524 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=19)
+2023-11-05 10:27:57.839 [main] INFO  Application - Application started in 1.847 seconds.
+2023-11-05 10:27:57.839 [main] INFO  Application - Application started: io.ktor.server.application.Application@bc042d5
+2023-11-05 10:27:58.098 [DefaultDispatcher-worker-2] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:11:11.893 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-05 13:11:11.981 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 105ms
+2023-11-05 13:11:12.077 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [favicon.ico]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-05 13:11:12.083 [eventLoopGroupProxy-4-1] INFO  Application - [31m404 Not Found[m: [36mGET[m - /favicon.ico in 7ms
+2023-11-05 13:11:24.425 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:11:24.430 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:11:24.474 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-05 13:11:24.488 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad :kotlin.Unit
+2023-11-05 13:11:24.488 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 68ms
+2023-11-05 13:13:36.335 [eventLoopGroupProxy-4-3] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:13:36.335 [eventLoopGroupProxy-4-3] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:13:36.349 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME = 'mvtaheri'
+2023-11-05 13:13:36.374 [eventLoopGroupProxy-4-3] INFO  Application - user daofacad :kotlin.Unit
+2023-11-05 13:13:36.374 [eventLoopGroupProxy-4-3] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 40ms
+2023-11-05 13:21:37.867 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@bc042d5
+2023-11-05 13:21:37.868 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@bc042d5
+2023-11-05 13:21:55.410 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 13:21:56.052 [main] INFO  Application - Hello from module!
+2023-11-05 13:21:56.499 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 13:21:56.516 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 13:21:56.563 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE 'mvtaheri'
+2023-11-05 13:21:56.573 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=20)
+2023-11-05 13:21:56.803 [main] INFO  Application - Application started in 1.469 seconds.
+2023-11-05 13:21:56.804 [main] INFO  Application - Application started: io.ktor.server.application.Application@5484117b
+2023-11-05 13:21:57.007 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:21:59.075 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:21:59.121 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:21:59.137 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE 'mvtaheri'
+2023-11-05 13:21:59.152 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :kotlin.Unit
+2023-11-05 13:21:59.179 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 124ms
+2023-11-05 13:26:07.613 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:26:07.614 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:26:07.627 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE 'mvtaheri'
+2023-11-05 13:26:07.639 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad :kotlin.Unit
+2023-11-05 13:26:07.640 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 27ms
+2023-11-05 13:28:06.043 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@5484117b
+2023-11-05 13:28:06.044 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@5484117b
+2023-11-05 13:28:54.817 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 13:28:55.586 [main] INFO  Application - Hello from module!
+2023-11-05 13:28:56.036 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 13:28:56.054 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 13:28:56.092 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:28:56.107 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=21)
+2023-11-05 13:28:56.345 [main] INFO  Application - Application started in 1.607 seconds.
+2023-11-05 13:28:56.346 [main] INFO  Application - Application started: io.ktor.server.application.Application@5484117b
+2023-11-05 13:28:56.537 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:29:53.680 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:29:53.730 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:29:53.744 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:29:53.772 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-05 13:29:53.773 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad :kotlin.Unit
+2023-11-05 13:29:53.802 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 139ms
+2023-11-05 13:44:26.330 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@5484117b
+2023-11-05 13:44:26.331 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@5484117b
+2023-11-05 13:44:31.380 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 13:44:32.126 [main] INFO  Application - Hello from module!
+2023-11-05 13:44:32.614 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 13:44:32.640 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 13:44:32.697 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:44:32.708 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=22)
+2023-11-05 13:44:33.046 [main] INFO  Application - Application started in 1.732 seconds.
+2023-11-05 13:44:33.046 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:44:33.264 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:44:56.903 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:44:56.985 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:44:56.997 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:44:57.010 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad 1:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-05 13:44:57.011 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad  2:kotlin.Unit
+2023-11-05 13:44:57.036 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 170ms
+2023-11-05 13:52:24.053 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:52:24.054 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:52:28.932 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 13:52:29.509 [main] INFO  Application - Hello from module!
+2023-11-05 13:52:29.955 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 13:52:29.973 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 13:52:30.017 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:52:30.027 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=23)
+2023-11-05 13:52:30.246 [main] INFO  Application - Application started in 1.416 seconds.
+2023-11-05 13:52:30.246 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:52:30.446 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:52:52.973 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:52:53.014 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:52:53.026 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:52:53.057 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad  2:com.example.dao.DAOFacadeImpl@a04f2b1
+2023-11-05 13:52:53.088 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 135ms
+2023-11-05 13:54:50.104 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:54:50.106 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:54:54.599 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 13:54:55.287 [main] INFO  Application - Hello from module!
+2023-11-05 13:54:55.815 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 13:54:55.835 [DefaultDispatcher-worker-2] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 13:54:55.891 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:54:55.901 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=24)
+2023-11-05 13:54:56.144 [main] INFO  Application - Application started in 1.64 seconds.
+2023-11-05 13:54:56.145 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-05 13:54:56.346 [DefaultDispatcher-worker-2] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 13:54:56.698 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:54:56.743 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:54:56.756 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:54:56.769 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad  2:com.example.dao.DAOFacadeImpl@a04f2b1
+2023-11-05 13:54:56.795 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 116ms
+2023-11-05 13:59:36.634 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 13:59:36.635 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:mvtaheri
+2023-11-05 13:59:36.650 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 13:59:36.682 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad  2:com.example.dao.DAOFacadeImpl@7688a980
+2023-11-05 13:59:36.682 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 48ms
+2023-11-05 14:07:38.391 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:07:38.392 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:07:43.021 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 14:07:43.570 [main] INFO  Application - Hello from module!
+2023-11-05 14:07:44.033 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 14:07:44.052 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 14:07:44.094 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 14:07:44.107 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=25)
+2023-11-05 14:07:44.325 [main] INFO  Application - Application started in 1.395 seconds.
+2023-11-05 14:07:44.326 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:07:44.532 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 14:15:51.417 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:15:51.420 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:15:56.583 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-05 14:15:57.120 [main] INFO  Application - Hello from module!
+2023-11-05 14:15:57.630 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-05 14:15:57.649 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-05 14:15:57.694 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 14:15:57.702 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=26)
+2023-11-05 14:15:57.927 [main] INFO  Application - Application started in 1.427 seconds.
+2023-11-05 14:15:57.928 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-05 14:15:58.115 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-05 14:16:01.166 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-05 14:16:01.248 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-05 14:16:01.259 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 14:16:01.272 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad 1:com.example.dao.DAOFacadeImpl@4d9a35c9
+2023-11-05 14:16:01.282 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-05 14:16:01.290 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad 2:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-05 14:16:01.290 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad  3:kotlin.Unit
+2023-11-05 14:16:01.314 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 180ms
+2023-11-06 13:39:05.296 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-06 13:39:05.907 [main] INFO  Application - Hello from module!
+2023-11-06 13:39:06.437 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-06 13:39:06.459 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-06 13:39:06.520 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-06 13:39:06.530 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=27)
+2023-11-06 13:39:06.858 [main] INFO  Application - Application started in 1.616 seconds.
+2023-11-06 13:39:06.859 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-06 13:39:07.183 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-06 13:39:21.387 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-06 13:39:21.467 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 95ms
+2023-11-07 12:08:50.074 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-07 12:08:51.254 [main] INFO  Application - Hello from module!
+2023-11-07 12:08:52.078 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-07 12:08:52.104 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-07 12:08:52.152 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-07 12:08:52.163 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=28)
+2023-11-07 12:08:52.516 [main] INFO  Application - Application started in 2.561 seconds.
+2023-11-07 12:08:52.517 [main] INFO  Application - Application started: io.ktor.server.application.Application@68ab0936
+2023-11-07 12:08:52.989 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-07 12:08:55.740 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, ]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:1 -> FAILURE "Selector didn't match" @ /getuser/{username}
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-07 12:08:55.808 [eventLoopGroupProxy-4-1] INFO  Application - [31m404 Not Found[m: [36mGET[m - /getuser/ in 84ms
+2023-11-07 12:14:26.988 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-07 12:14:27.014 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:mvtaheri
+2023-11-07 12:14:27.026 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-07 12:14:27.035 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-07 12:14:27.045 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-07 12:14:27.053 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad 1:com.example.dao.DAOFacadeImpl@311c693e
+2023-11-07 12:14:27.063 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-07 12:14:27.076 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad 2:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-07 12:14:27.076 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad  3:kotlin.Unit
+2023-11-07 12:14:27.077 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 100ms
+2023-11-07 12:57:20.176 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@68ab0936
+2023-11-07 12:57:20.177 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@68ab0936
+2023-11-08 12:54:47.502 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 12:54:48.318 [main] INFO  Application - Hello from module!
+2023-11-08 12:54:48.756 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 12:54:48.778 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 12:54:48.815 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 12:54:48.838 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=29)
+2023-11-08 12:54:49.050 [main] INFO  Application - Application started in 1.634 seconds.
+2023-11-08 12:54:49.051 [main] INFO  Application - Application started: io.ktor.server.application.Application@440e3ce6
+2023-11-08 12:54:49.244 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 12:55:00.446 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, mvtaheri]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[mvtaheri]] @ /getuser/{username}/(method:GET)
+2023-11-08 12:55:00.515 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:mvtaheri
+2023-11-08 12:55:00.529 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 12:55:00.541 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-08 12:55:00.585 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 163ms
+2023-11-08 12:55:00.594 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 12:55:00.605 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad 1:com.example.dao.DAOFacadeImpl@16246841
+2023-11-08 12:55:00.619 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 12:55:00.630 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad 2:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-08 12:55:00.631 [eventLoopGroupProxy-4-1] INFO  Application - user daofacad  3:kotlin.Unit
+2023-11-08 12:55:00.633 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/mvtaheri request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 12:55:00.634 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/mvtaheri in 212ms
+2023-11-08 13:02:27.952 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[signup]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[signup]] @ /getuser/{username}/(method:GET)
+2023-11-08 13:02:27.953 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:signup
+2023-11-08 13:02:27.969 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:02:27.992 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-08 13:02:27.994 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/signup in 43ms
+2023-11-08 13:02:28.005 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:02:28.027 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad 1:com.example.dao.DAOFacadeImpl@2385e6e6
+2023-11-08 13:02:28.044 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:02:28.051 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad 2:User(username=mvtaheri, password=213, salt=asdfsffasf, id=15)
+2023-11-08 13:02:28.052 [eventLoopGroupProxy-4-2] INFO  Application - user daofacad  3:kotlin.Unit
+2023-11-08 13:02:28.052 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:02:28.052 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/signup in 101ms
+2023-11-08 13:02:38.592 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:02:38.594 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:02:38.596 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /signup in 4ms
+2023-11-08 13:02:38.713 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [favicon.ico]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:02:38.714 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /favicon.ico request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:02:38.714 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /favicon.ico in 1ms
+2023-11-08 13:02:44.078 [eventLoopGroupProxy-4-3] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:02:44.079 [eventLoopGroupProxy-4-3] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:02:44.079 [eventLoopGroupProxy-4-3] INFO  Application - [31m404 Not Found[m: [36mGET[m - /signup in 1ms
+2023-11-08 13:03:17.742 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@440e3ce6
+2023-11-08 13:03:17.743 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@440e3ce6
+2023-11-08 13:03:21.850 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:03:22.402 [main] INFO  Application - Hello from module!
+2023-11-08 13:03:22.903 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:03:22.928 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 13:03:22.979 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:03:22.987 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=30)
+2023-11-08 13:03:23.251 [main] INFO  Application - Application started in 1.462 seconds.
+2023-11-08 13:03:23.253 [main] INFO  Application - Application started: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:03:23.549 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:03:26.055 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> FAILURE "Selector didn't match" @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:03:26.085 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:03:26.111 [eventLoopGroupProxy-4-1] INFO  Application - [31m405 Method Not Allowed[m: [36mGET[m - /signup in 67ms
+2023-11-08 13:08:45.669 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:08:45.697 [eventLoopGroupProxy-4-2] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:08:45.728 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - No suitable content converter found for request type class com.example.data.request.AuthRequest
+2023-11-08 13:08:45.729 [eventLoopGroupProxy-4-2] DEBUG Application - Conversion failed, null returned
+io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to com.example.data.request.AuthRequest
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:107)
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt$receiveNullable$2.invokeSuspend(ApplicationReceiveFunctions.kt)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuation.resumeWith(DispatchedContinuation.kt:204)
+	at io.ktor.util.pipeline.SuspendFunctionGun.resumeRootWith(SuspendFunctionGun.kt:135)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.SuspendFunctionGun.access$loop(SuspendFunctionGun.kt:11)
+	at io.ktor.util.pipeline.SuspendFunctionGun$continuation$1.resumeWith(SuspendFunctionGun.kt:59)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-08 13:08:45.732 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:08:45.732 [eventLoopGroupProxy-4-2] INFO  Application - [31m400 Bad Request[m: [36mPOST[m - /signup in 70ms
+2023-11-08 13:10:05.037 [eventLoopGroupProxy-4-3] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:10:05.038 [eventLoopGroupProxy-4-3] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:10:05.038 [eventLoopGroupProxy-4-3] TRACE i.k.s.p.c.ContentNegotiation - Skipping content converter for request type class com.example.data.request.AuthRequest because content type */* does not match application/json
+2023-11-08 13:10:05.038 [eventLoopGroupProxy-4-3] TRACE i.k.s.p.c.ContentNegotiation - No suitable content converter found for request type class com.example.data.request.AuthRequest
+2023-11-08 13:10:05.039 [eventLoopGroupProxy-4-3] DEBUG Application - Conversion failed, null returned
+io.ktor.server.plugins.CannotTransformContentToTypeException: Cannot transform this request's content to com.example.data.request.AuthRequest
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveNullable(ApplicationReceiveFunctions.kt:107)
+	at io.ktor.server.request.ApplicationReceiveFunctionsKt.receiveOrNull(ApplicationReceiveFunctions.kt:136)
+	at com.example.AuthRouteKt$signIn$1.invokeSuspend(AuthRoute.kt:157)
+	at com.example.AuthRouteKt$signIn$1.invoke(AuthRoute.kt)
+	at com.example.AuthRouteKt$signIn$1.invoke(AuthRoute.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:120)
+	at io.ktor.util.pipeline.SuspendFunctionGun.proceed(SuspendFunctionGun.kt:78)
+	at io.ktor.util.pipeline.SuspendFunctionGun.execute$ktor_utils(SuspendFunctionGun.kt:98)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-08 13:10:05.039 [eventLoopGroupProxy-4-3] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:10:05.040 [eventLoopGroupProxy-4-3] INFO  Application - [31m400 Bad Request[m: [36mPOST[m - /signup in 4ms
+2023-11-08 13:11:08.681 [eventLoopGroupProxy-4-4] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:11:08.682 [eventLoopGroupProxy-4-4] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:11:08.731 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:11:08.792 [eventLoopGroupProxy-4-4] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from String to OutgoingContent for the POST /signup request because the String type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:11:08.801 [eventLoopGroupProxy-4-4] INFO  Application - [31m409 Conflict[m: [36mPOST[m - /signup in 121ms
+2023-11-08 13:24:39.097 [eventLoopGroupProxy-4-5] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:24:39.098 [eventLoopGroupProxy-4-5] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:24:39.108 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:24:39.134 [eventLoopGroupProxy-4-5] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from String to OutgoingContent for the POST /signup request because the String type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:24:39.135 [eventLoopGroupProxy-4-5] INFO  Application - [31m409 Conflict[m: [36mPOST[m - /signup in 39ms
+2023-11-08 13:26:18.927 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:26:18.928 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:26:24.549 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:26:25.316 [main] INFO  Application - Hello from module!
+2023-11-08 13:26:25.750 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:26:25.769 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 13:26:25.808 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:26:25.816 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=31)
+2023-11-08 13:26:26.044 [main] INFO  Application - Application started in 1.568 seconds.
+2023-11-08 13:26:26.045 [main] INFO  Application - Application started: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:26:26.267 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:26:33.979 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:26:34.022 [eventLoopGroupProxy-4-1] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:26:34.102 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: POST - /signup
+java.security.NoSuchAlgorithmException: SHA1PRING SecureRandom not available
+	at java.base/sun.security.jca.GetInstance.getInstance(GetInstance.java:159)
+	at java.base/java.security.SecureRandom.getInstance(SecureRandom.java:387)
+	at com.example.security.hashing.SHA256HashingService.generateSlatedHash(SHA256HashingService.kt:10)
+	at com.example.security.hashing.HashingService$DefaultImpls.generateSlatedHash$default(HashingService.kt:4)
+	at com.example.AuthRouteKt$signup$1.invokeSuspend(AuthRoute.kt:85)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuation.resumeWith(DispatchedContinuation.kt:204)
+	at io.ktor.util.pipeline.SuspendFunctionGun.resumeRootWith(SuspendFunctionGun.kt:135)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.SuspendFunctionGun.access$loop(SuspendFunctionGun.kt:11)
+	at io.ktor.util.pipeline.SuspendFunctionGun$continuation$1.resumeWith(SuspendFunctionGun.kt:59)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-08 13:26:34.107 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:26:34.133 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mPOST[m - /signup in 172ms
+2023-11-08 13:40:18.507 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:40:18.508 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@a96d56c
+2023-11-08 13:40:25.269 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:40:25.984 [main] INFO  Application - Hello from module!
+2023-11-08 13:40:26.802 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:40:26.822 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 13:40:26.882 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:40:26.892 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=32)
+2023-11-08 13:40:27.156 [main] INFO  Application - Application started in 1.995 seconds.
+2023-11-08 13:40:27.157 [main] INFO  Application - Application started: io.ktor.server.application.Application@1d12e953
+2023-11-08 13:40:27.368 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:40:37.693 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:40:37.731 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:40:37.761 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /getuser/vahid in 79ms
+2023-11-08 13:40:49.471 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:40:49.472 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:40:49.472 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /getuser/vahid in 1ms
+2023-11-08 13:40:54.110 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:40:54.111 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:40:54.111 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /getuser/vahid in 1ms
+2023-11-08 13:41:26.443 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@1d12e953
+2023-11-08 13:41:26.445 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@1d12e953
+2023-11-08 13:41:30.122 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:41:30.654 [main] INFO  Application - Hello from module!
+2023-11-08 13:41:31.319 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:41:31.352 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 13:41:31.421 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:41:31.432 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=33)
+2023-11-08 13:41:31.765 [main] INFO  Application - Application started in 1.691 seconds.
+2023-11-08 13:41:31.766 [main] INFO  Application - Application started: io.ktor.server.application.Application@3bd6ba24
+2023-11-08 13:41:32.019 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:41:33.710 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}/(method:GET)
+2023-11-08 13:41:33.735 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:vahid
+2023-11-08 13:41:33.748 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE '%vahid%'
+2023-11-08 13:41:33.769 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/vahid
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1$user2$1.invokeSuspend(AuthRoute.kt:50)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2023-11-08 13:41:33.775 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:41:33.798 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/vahid in 103ms
+2023-11-08 13:41:36.894 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}/(method:GET)
+2023-11-08 13:41:36.895 [eventLoopGroupProxy-4-2] INFO  Application - getpathusername:vahid
+2023-11-08 13:41:36.908 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE '%vahid%'
+2023-11-08 13:41:36.919 [eventLoopGroupProxy-4-2] ERROR Application - Unhandled: GET - /getuser/vahid
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1$user2$1.invokeSuspend(AuthRoute.kt:50)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2023-11-08 13:41:36.919 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:41:36.920 [eventLoopGroupProxy-4-2] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/vahid in 27ms
+2023-11-08 13:41:36.985 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [favicon.ico]
+/, segment:0 -> SUCCESS @ /
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:41:36.986 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /favicon.ico request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:41:36.987 [eventLoopGroupProxy-4-2] INFO  Application - [31m404 Not Found[m: [36mGET[m - /favicon.ico in 2ms
+2023-11-08 13:42:30.595 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@3bd6ba24
+2023-11-08 13:42:30.597 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@3bd6ba24
+2023-11-08 13:42:35.207 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:42:35.972 [main] INFO  Application - Hello from module!
+2023-11-08 13:42:36.442 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:42:36.459 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('213', 'asdfsffasf', 'mvtaheri')
+2023-11-08 13:42:36.509 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
+2023-11-08 13:42:36.519 [main] INFO  Application - result of dao add user:User(username=mvtaheri, password=213, salt=asdfsffasf, id=34)
+2023-11-08 13:42:36.755 [main] INFO  Application - Application started in 1.615 seconds.
+2023-11-08 13:42:36.756 [main] INFO  Application - Application started: io.ktor.server.application.Application@2a8a4e0c
+2023-11-08 13:42:36.960 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:42:41.800 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}/(method:GET)
+2023-11-08 13:42:41.835 [eventLoopGroupProxy-4-1] INFO  Application - getpathusername:vahid
+2023-11-08 13:42:41.849 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE '%vahid%'
+2023-11-08 13:42:41.869 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: GET - /getuser/vahid
+java.lang.NullPointerException: null
+	at com.example.AuthRouteKt$getUsers$1$user2$1.invokeSuspend(AuthRoute.kt:50)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2023-11-08 13:42:41.876 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET /getuser/vahid request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:42:41.901 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /getuser/vahid in 130ms
+2023-11-08 13:51:50.579 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@2a8a4e0c
+2023-11-08 13:51:50.582 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@2a8a4e0c
+2023-11-08 13:51:56.329 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:51:57.096 [main] INFO  Application - Hello from module!
+2023-11-08 13:51:57.840 [main] INFO  Application - Application started in 1.588 seconds.
+2023-11-08 13:51:57.841 [main] INFO  Application - Application started: io.ktor.server.application.Application@57435801
+2023-11-08 13:51:58.188 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:52:02.434 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  No results
+Route resolve result:
+  FAILURE "No matched subtrees found" @ /
+2023-11-08 13:52:02.461 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET / request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:52:02.491 [eventLoopGroupProxy-4-1] INFO  Application - [31m404 Not Found[m: [36mGET[m - / in 62ms
+2023-11-08 13:52:24.648 [KtorShutdownHook] INFO  Application - Application stopping: io.ktor.server.application.Application@57435801
+2023-11-08 13:52:24.650 [KtorShutdownHook] INFO  Application - Application stopped: io.ktor.server.application.Application@57435801
+2023-11-08 13:52:37.421 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 13:52:37.976 [main] INFO  Application - Hello from module!
+2023-11-08 13:52:38.678 [main] INFO  Application - Application started in 1.309 seconds.
+2023-11-08 13:52:38.679 [main] INFO  Application - Application started: io.ktor.server.application.Application@2c7106d9
+2023-11-08 13:52:38.881 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 13:52:39.629 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-08 13:52:39.727 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 13:52:39.733 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS
+2023-11-08 13:52:39.865 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 255ms
+2023-11-08 13:54:40.534 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Selector didn't match" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 13:54:40.554 [eventLoopGroupProxy-4-2] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 13:54:40.632 [eventLoopGroupProxy-4-2] ERROR Application - Unhandled: POST - /signup
+java.security.NoSuchAlgorithmException: SHA1PRING SecureRandom not available
+	at java.base/sun.security.jca.GetInstance.getInstance(GetInstance.java:159)
+	at java.base/java.security.SecureRandom.getInstance(SecureRandom.java:387)
+	at com.example.security.hashing.SHA256HashingService.generateSlatedHash(SHA256HashingService.kt:10)
+	at com.example.security.hashing.HashingService$DefaultImpls.generateSlatedHash$default(HashingService.kt:4)
+	at com.example.AuthRouteKt$signup$1.invokeSuspend(AuthRoute.kt:79)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuation.resumeWith(DispatchedContinuation.kt:204)
+	at io.ktor.util.pipeline.SuspendFunctionGun.resumeRootWith(SuspendFunctionGun.kt:135)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.SuspendFunctionGun.access$loop(SuspendFunctionGun.kt:11)
+	at io.ktor.util.pipeline.SuspendFunctionGun$continuation$1.resumeWith(SuspendFunctionGun.kt:59)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-08 13:54:40.636 [eventLoopGroupProxy-4-2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 13:54:40.637 [eventLoopGroupProxy-4-2] INFO  Application - [31m500 Internal Server Error[m: [36mPOST[m - /signup in 104ms
+2023-11-08 13:54:49.210 [eventLoopGroupProxy-4-3] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-08 13:54:49.224 [DefaultDispatcher-worker-4] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS
+2023-11-08 13:54:49.256 [eventLoopGroupProxy-4-3] INFO  Application - [32m200 OK[m: [36mGET[m - / in 46ms
+2023-11-08 14:02:59.428 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@2c7106d9
+2023-11-08 14:02:59.430 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@2c7106d9
+2023-11-08 14:03:04.177 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 14:03:04.893 [main] INFO  Application - Hello from module!
+2023-11-08 14:03:05.539 [main] INFO  Application - Application started in 1.43 seconds.
+2023-11-08 14:03:05.539 [main] INFO  Application - Application started: io.ktor.server.application.Application@329bad59
+2023-11-08 14:03:05.745 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 14:04:34.189 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Selector didn't match" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 14:04:34.193 [eventLoopGroupProxy-4-1] INFO  Application - signup path run:
+2023-11-08 14:04:34.233 [eventLoopGroupProxy-4-1] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 14:04:34.336 [eventLoopGroupProxy-4-1] ERROR Application - Unhandled: POST - /signup
+java.security.NoSuchAlgorithmException: SHA1PRING SecureRandom not available
+	at java.base/sun.security.jca.GetInstance.getInstance(GetInstance.java:159)
+	at java.base/java.security.SecureRandom.getInstance(SecureRandom.java:387)
+	at com.example.security.hashing.SHA256HashingService.generateSlatedHash(SHA256HashingService.kt:10)
+	at com.example.security.hashing.HashingService$DefaultImpls.generateSlatedHash$default(HashingService.kt:4)
+	at com.example.AuthRouteKt$signup$1.invokeSuspend(AuthRoute.kt:80)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.DispatchedContinuation.resumeWith(DispatchedContinuation.kt:204)
+	at io.ktor.util.pipeline.SuspendFunctionGun.resumeRootWith(SuspendFunctionGun.kt:135)
+	at io.ktor.util.pipeline.SuspendFunctionGun.loop(SuspendFunctionGun.kt:109)
+	at io.ktor.util.pipeline.SuspendFunctionGun.access$loop(SuspendFunctionGun.kt:11)
+	at io.ktor.util.pipeline.SuspendFunctionGun$continuation$1.resumeWith(SuspendFunctionGun.kt:59)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-11-08 14:04:34.342 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 14:04:34.361 [eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mPOST[m - /signup in 187ms
+2023-11-08 14:04:43.901 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-08 14:04:43.972 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 14:04:43.977 [DefaultDispatcher-worker-2] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS
+2023-11-08 14:04:44.037 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - / in 136ms
+2023-11-08 14:18:24.608 [main] INFO  Application - Application stopping: io.ktor.server.application.Application@329bad59
+2023-11-08 14:18:24.609 [main] INFO  Application - Application stopped: io.ktor.server.application.Application@329bad59
+2023-11-08 14:18:29.998 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-11-08 14:18:30.504 [main] INFO  Application - Hello from module!
+2023-11-08 14:18:31.096 [main] INFO  Application - Application started in 1.146 seconds.
+2023-11-08 14:18:31.097 [main] INFO  Application - Application started: io.ktor.server.application.Application@707b1a44
+2023-11-08 14:18:31.299 [DefaultDispatcher-worker-1] INFO  Application - Responding at http://0.0.0.0:8081
+2023-11-08 14:18:47.777 [eventLoopGroupProxy-4-1] TRACE io.ktor.routing.Routing - Trace for [signup]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Selector didn't match" @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:1 -> SUCCESS @ /signup
+    /signup/(method:POST), segment:1 -> SUCCESS @ /signup/(method:POST)
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "signup" -> "(method:POST)"
+Route resolve result:
+  SUCCESS @ /signup/(method:POST)
+2023-11-08 14:18:47.781 [eventLoopGroupProxy-4-1] INFO  Application - signup path run:
+2023-11-08 14:18:47.819 [eventLoopGroupProxy-4-1] TRACE i.k.server.engine.DefaultTransform - No Default Transformations found for class io.ktor.utils.io.ByteBufferChannel and expected type TypeInfo(type=class com.example.data.request.AuthRequest, reifiedType=class com.example.data.request.AuthRequest, kotlinType=com.example.data.request.AuthRequest) for call /signup
+2023-11-08 14:18:47.976 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'
+2023-11-08 14:18:47.999 [DefaultDispatcher-worker-1] DEBUG Exposed - INSERT INTO USERS (PASSWORD, SALT, USERNAME) VALUES ('123', '932e01d0fd396b0ff7ef9679035476ead43889412b15924e0178e304346bbe39', 'vahid')
+2023-11-08 14:18:48.041 [eventLoopGroupProxy-4-1] INFO  Application - was acknowledged:User(username=vahid, password=123, salt=932e01d0fd396b0ff7ef9679035476ead43889412b15924e0178e304346bbe39, id=35)
+2023-11-08 14:18:48.045 [eventLoopGroupProxy-4-1] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the POST /signup request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
+2023-11-08 14:18:48.067 [eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mPOST[m - /signup in 305ms
+2023-11-08 14:18:55.681 [eventLoopGroupProxy-4-2] TRACE io.ktor.routing.Routing - Trace for []
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> SUCCESS @ /(method:GET)
+  /getuser, segment:0 -> FAILURE "Selector didn't match" @ /getuser
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "<slash>" -> "(method:GET)"
+Route resolve result:
+  SUCCESS @ /(method:GET)
+2023-11-08 14:18:55.700 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS
+2023-11-08 14:18:55.746 [eventLoopGroupProxy-4-2] INFO  Application - [32m200 OK[m: [36mGET[m - / in 66ms
+2023-11-08 14:26:48.043 [eventLoopGroupProxy-4-4] TRACE io.ktor.routing.Routing - Trace for [getuser, vahid]
+/, segment:0 -> SUCCESS @ /
+  /, segment:0 -> SUCCESS @ /
+    /(method:GET), segment:0 -> FAILURE "Not all segments matched" @ /(method:GET)
+  /getuser, segment:1 -> SUCCESS @ /getuser
+    /getuser/{username}, segment:2 -> SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}
+      /getuser/{username}/(method:GET), segment:2 -> SUCCESS @ /getuser/{username}/(method:GET)
+  /signIn, segment:0 -> FAILURE "Selector didn't match" @ /signIn
+  /signup, segment:0 -> FAILURE "Selector didn't match" @ /signup
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/authenticate, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/authenticate
+  /(authenticate "default"), segment:0 -> SUCCESS @ /(authenticate "default")
+    /(authenticate "default")/secret, segment:0 -> FAILURE "Selector didn't match" @ /(authenticate "default")/secret
+Matched routes:
+  "" -> "getuser" -> "{username}" -> "(method:GET)"
+Route resolve result:
+  SUCCESS; Parameters [username=[vahid]] @ /getuser/{username}/(method:GET)
+2023-11-08 14:26:48.065 [eventLoopGroupProxy-4-4] INFO  Application - getpathusername:vahid
+2023-11-08 14:26:48.085 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.USERNAME LIKE '%vahid%'
+2023-11-08 14:26:48.095 [eventLoopGroupProxy-4-4] INFO  Application - getpathusername:User(username=vahid, password=123, salt=932e01d0fd396b0ff7ef9679035476ead43889412b15924e0178e304346bbe39, id=35)
+2023-11-08 14:26:48.097 [eventLoopGroupProxy-4-4] INFO  Application - [32m200 OK[m: [36mGET[m - /getuser/vahid in 58ms
+2023-11-08 14:26:48.111 [DefaultDispatcher-worker-1] DEBUG Exposed - SELECT USERS.ID, USERS.USERNAME, USERS.PASSWORD, USERS.SALT FROM USERS WHERE USERS.ID = 15
